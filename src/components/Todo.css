@@ -215,7 +215,7 @@ li span {
 @media (max-width: 410px) {
   .todo-container {
     position: relative;
-    top: -90px;
+    top: -95px;
   }
 
   .todo-btn {
