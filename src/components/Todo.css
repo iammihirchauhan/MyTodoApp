@@ -180,7 +180,7 @@ li span {
   border: none;
   border: 1px solid black;
   color: #222;
-  background-color: #FFD700 ;
+  background-color: #ffd700;
 }
 
 .edit-btn:hover {
@@ -212,12 +212,12 @@ li span {
   background-color: #dc2626;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 410px) {
   .todo-container {
     position: relative;
     top: -90px;
   }
-  
+
   .todo-btn {
     height: 45px;
     font-size: 1.5rem;
