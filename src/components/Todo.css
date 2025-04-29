@@ -62,7 +62,6 @@ form input {
   border: none;
   outline: none;
   border: 1px solid #222;
-  border-radius: 15;
   border-top-left-radius: 17px;
   border-bottom-left-radius: 17px;
   max-width: 218px;
@@ -214,6 +213,11 @@ li span {
 }
 
 @media (max-width: 375px) {
+  .todo-container {
+    position: relative;
+    top: -90px;
+  }
+  
   .todo-btn {
     height: 45px;
     font-size: 1.5rem;
