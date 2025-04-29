@@ -3,7 +3,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 import { useState } from "react";
 
-export const Todolist = ({
+export const TodoList = ({
   data,
   checked,
   onHandleDeleteTodo,
