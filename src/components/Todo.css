@@ -1,0 +1,237 @@
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 3%;
+  background: linear-gradient(135deg, #dbeafe, #f0f4f8);
+  color: #34495e;
+  transition: 0.3s linear;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+  color: #374151;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.date-time {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+form {
+  display: flex;
+  font-size: 1.7rem;
+  justify-content: center;
+  margin: 15px 0;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+form input {
+  padding: 10px;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: none;
+  border-radius: 15;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  max-width: 500px;
+  transition: background-color 200ms ease-in-out;
+  width: 100%;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.edit-input {
+  padding: 5px;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: none;
+  border: 1px solid #222;
+  border-radius: 15;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  max-width: 218px;
+  transition: background-color 200ms ease-in-out;
+  width: 100%;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+form input:hover {
+  cursor: text;
+}
+
+form input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0 12px 12px 0;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: #2980b9;
+}
+
+form button {
+  padding: 10.8px;
+  font-size: 17px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  min-width: 100px;
+  background-color: #5dade2;
+}
+
+span {
+  margin-right: 3.2rem;
+}
+
+.myUnOrdList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.todo-list {
+  min-width: 25%;
+  list-style: none;
+}
+
+.todo-item {
+  margin: 2.4rem;
+  font-size: 20px;
+  color: #333333;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #ffffff, #e0e7ff);
+  width: 400px;
+  padding: 1.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.todo-left {
+  display: flex;
+  gap: 1.2rem;
+}
+
+li span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20rem;
+  color: #1c2833;
+}
+
+.check-btn,
+.delete-btn,
+.edit-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 0 5px;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.check-btn {
+  color: #ffffff;
+  background-color: #22c55e;
+}
+
+.delete-btn {
+  color: #ffffff;
+  background-color: #ef4444;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border: 1px solid black;
+  color: #222;
+  background-color: #FFD700 ;
+}
+
+.edit-btn:hover {
+  background-color: #ffc107;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.checkList {
+  text-decoration: line-through;
+}
+
+.notCheckList {
+  text-decoration: none;
+}
+
+.clear-btn {
+  cursor: pointer;
+  width: 16vh;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #dc2626;
+}
+
+@media (max-width: 375px) {
+  .todo-btn {
+    height: 45px;
+    font-size: 1.5rem;
+  }
+  .todo-item {
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  }
+  .check-btn,
+  .delete-btn {
+    font-size: 2.6rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
