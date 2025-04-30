@@ -11,13 +11,13 @@ export const TodoList = ({
   onHandleEditTodo,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [editValue, setEditeValue] = useState(data);
+  const [editValue, setEditValue] = useState(data);
 
   const handleEditConfirm = () => {
     onHandleEditTodo(data, editValue); // Pass old and new values
-    setIsEditing(false);
+    setIsEditing(false); //close edit
   };
-  
+
   return (
     <li className="todo-item">
       {isEditing ? (
@@ -26,27 +26,21 @@ export const TodoList = ({
             type="text"
             className="edit-input"
             value={editValue}
-            onChange={(e) => setEditeValue(e.target.value)}
+            onChange={(e) => setEditValue(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleEditConfirm()}
           />
-          <button className="check-btn" onClick={onHandleCheckedTodo}>
-            <IoMdCheckmark />
-          </button>
         </>
       ) : (
         <>
           <button className="edit-btn" onClick={() => setIsEditing(true)}>
             <FaRegEdit />
           </button>
-          <span className={checked ? "checkList" : "notcheckList"}>{data}</span>
-          <button
-            className="check-btn"
-            onClick={() => onHandleCheckedTodo(data)}
-          >
-            <IoMdCheckmark />
-          </button>
         </>
       )}
+      <span className={checked ? "checkList" : "notcheckList"}>{data}</span>
+      <button className="check-btn" onClick={() => onHandleCheckedTodo(data)}>
+        <IoMdCheckmark />
+      </button>
 
       <button className="delete-btn" onClick={() => onHandleDeleteTodo(data)}>
         <MdDeleteForever />

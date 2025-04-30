@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { TodoForm } from "./TodoForm";
-import { TodoList } from "./TodoList"; 
+import { TodoList } from "./TodoList";
 import { TodoDateTime } from "./TodoDateTime";
 import "./Todo.css";
 
@@ -52,12 +52,6 @@ export const Todo = () => {
 
   const handleEditTodo = (oldContent, newContent) => {
     if (!newContent.trim()) return;
-
-    const ifTodoContentMatched = tasks.find(
-      (curTask) => curTask.content === newContent
-    );
-    if (ifTodoContentMatched) return;
-
     const updatedTasks = tasks.map((curTask) =>
       curTask.content === oldContent
         ? { ...curTask, content: newContent }
@@ -65,7 +59,7 @@ export const Todo = () => {
     );
     setTasks(updatedTasks);
   };
-  
+
   return (
     <section className="todo-container">
       <header>
